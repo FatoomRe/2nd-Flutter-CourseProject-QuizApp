@@ -9,10 +9,21 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(
-            'assets/images/quiz-logo.png',
-            width: 300,
-          ),
+          //--------------------First way to do obacity -----------
+            Image.asset(
+              'assets/images/quiz-logo.png',
+              width: 300,
+              color: const Color.fromARGB(200, 255, 255, 255), //لون مع درجة شفافية
+            ),
+          //--------------------Second way -------------------
+          // Opacity(
+          //   opacity: 0.6, // درجة شفافية الصورة 
+          //   child: Image.asset(
+          //     'assets/images/quiz-logo.png',
+          //     width: 300,
+          //   ),
+          // ),
+          //------------------------------------------------
           const SizedBox(
             height: 80,
           ),
