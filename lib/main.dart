@@ -7,11 +7,12 @@ void main() {
       body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-          colors: [Color(0xffb31148), Color(0xff1e2757)],
+          colors: [Color(0xff673ab7), Color(0xffe91e63)],
           stops: [0, 1],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+        )
+      ),
           child: const StartScreen()),
     ),
   ));
