@@ -15,7 +15,12 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
 
-  Widget activeScreen = const StartScreen(switchScreen);
+  Widget? activeScreen;// the ? tells dart that this variable can be a widget or null
+  @override
+  void initState(){
+    activeScreen = StartScreen(switchScreen);
+    super.initState();
+  }
 
   void switchScreen(){
     setState(() {
@@ -27,6 +32,7 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(context) {
     return MaterialApp(
+    debugShowCheckedModeBanner: false, //this will remove debug banner
     home: Scaffold(
       body: Container(
           decoration: const BoxDecoration(
