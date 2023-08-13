@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class QuestionsScreen extends StatefulWidget{
+import 'package:secondcourseapp/answer_button.dart';
+
+class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
 
   @override
-  State<QuestionsScreen> createState(){
+  State<QuestionsScreen> createState() {
     return _QuestionsScreenState();
   }
 }
@@ -17,21 +19,28 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-        const Text('The questions will go here!'),
-        const SizedBox(height: 30,),
-        ElevatedButton(
-          onPressed: (){},
-          child: const Text('Answer 1'),
-        ),
-        ElevatedButton(
-          onPressed: (){},
-          child: const Text('Answer 2'),
-        ),
-        ElevatedButton(
-          onPressed: (){},
-          child: const Text('Answer 3'),
-        ),
-      ],),
+          const Text(
+            'The questions will go here!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+            ),
+          ),
+          const SizedBox(height: 30,),
+          AnswerButton(
+            answerText: 'Answer 1',
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: 'Answer 2',
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: 'Answer 3',
+            onTap: () {},
+          ),
+        ],
+      ),
     );
   }
 }
