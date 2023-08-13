@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:secondcourseapp/data/questions.dart';
 import 'package:secondcourseapp/answer_button.dart';
 
 class QuestionsScreen extends StatefulWidget {
@@ -14,29 +14,35 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(context) {
+    final currentQuestion = questions[0];
+
+
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'The questions will go here!',
-            style: TextStyle(
+          Text(
+            currentQuestion.text,
+            style:  const TextStyle(
               color: Colors.white,
-              fontSize: 24,
             ),
           ),
           const SizedBox(height: 30,),
           AnswerButton(
-            answerText: 'Answer 1',
+            answerText: currentQuestion.answers[0],
             onTap: () {},
           ),
           AnswerButton(
-            answerText: 'Answer 2',
+            answerText: currentQuestion.answers[1],
             onTap: () {},
           ),
           AnswerButton(
-            answerText: 'Answer 3',
+            answerText: currentQuestion.answers[2],
+            onTap: () {},
+          ),
+          AnswerButton(
+            answerText: currentQuestion.answers[3],
             onTap: () {},
           ),
         ],
