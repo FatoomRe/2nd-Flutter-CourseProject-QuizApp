@@ -13,7 +13,7 @@ class Quiz extends StatefulWidget {
   }
 }
 
-class _QuizState extends State<Quiz> {
+class _QuizState extends State<Quiz> { //by adding _ before class name we make it private class 
   List<String> selectedAnswers = [];
   var activeScreen = 'start-screen';
 
